@@ -36,7 +36,7 @@ async fn main() {
         .and(warp::body::json())
         .and_then(handle_request);
 
-    println!("Server running on http://127.0.0.1:8080");
+    println!("Server running on http://0.0.0.0:8080");
 
     warp::serve(send_route).run(([127, 0, 0, 1], 8080)).await;
 }

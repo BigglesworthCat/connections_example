@@ -24,8 +24,8 @@ fn handle_client(mut stream: TcpStream) {
 }
 
 fn main() {
-    let listener = TcpListener::bind("127.0.0.1:8888").expect("Failed to bind address");
-    println!("Server running on 127.0.0.1:8888");
+    let listener = TcpListener::bind("0.0.0.0:8888").expect("Failed to bind address");
+    println!("Server running on 0.0.0.0:8888");
 
     for stream in listener.incoming() {
         match stream {
