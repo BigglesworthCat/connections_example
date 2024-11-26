@@ -1,6 +1,6 @@
 [workspace]
 resolver = "2"
-members = ["https"]
+members = ["sockets", "https"]
 
 [workspace.dependencies]
 warp = "0.3"

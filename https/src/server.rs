@@ -34,9 +34,9 @@ async fn main() {
     let send_route = warp::post()
         .and(warp::path("send"))
         .and(warp::body::json())
-        .and_then(handle_request); // Call the async handler
+        .and_then(handle_request);
 
-    println!("Server running on http://127.0.0.1:12345");
+    println!("Server running on http://127.0.0.1:8080");
 
-    warp::serve(send_route).run(([127, 0, 0, 1], 12345)).await;
+    warp::serve(send_route).run(([127, 0, 0, 1], 8080)).await;
 }
